@@ -94,7 +94,6 @@ public class ConvertorImageFormat {
 
     public void blurringOnTheImage(String imagePath, String outputPath) {
         try {
-            // Создание директории, если она не существует
             // Загрузка изображения
             String nameImage = new File(imagePath).getName();
             BufferedImage image = ImageIO.read(new File(imagePath));
@@ -111,7 +110,6 @@ public class ConvertorImageFormat {
             String outputPathStr = outputPath + "Blur" + nameImage;
             // Сохранение обработанного изображения
             File outputFile = new File(outputPathStr);
-
             String format = "jpg";
             boolean result =  ImageIO.write(blurredImage, format,outputFile);
             if (result) {
