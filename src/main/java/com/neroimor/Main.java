@@ -14,5 +14,7 @@ public class Main {
 
         new ConvertorImageFormat().rgbToGray("src/main/resources/art.jpg",
                 "src/main/resources/output/");
+
+        new ConvertorImageFormat().outputToScreen("src/main/resources/art.jpg");
     }
 }

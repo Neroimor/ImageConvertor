@@ -1,6 +1,8 @@
 package com.neroimor.Let1;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.color.ColorSpace;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorConvertOp;
@@ -33,8 +35,6 @@ public class ConvertorImageFormat {
             System.out.println("Произошла ошибка");
         }
     }
-
-
     public void rgbToGray(String pathToImage, String pathToOutput){
 
         String inputImagePath = pathToImage;
@@ -62,4 +62,31 @@ public class ConvertorImageFormat {
         }
 
     }
+    public void outputToScreen(String pathToImage) {
+        try {
+            BufferedImage img = ImageIO.read(new File(pathToImage));
+            ImageIcon icon = new ImageIcon(img);
+
+            JFrame frame = new JFrame("Просмотр изображения");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            JLabel lbl = new JLabel(icon, JLabel.CENTER);
+            lbl.setHorizontalAlignment(SwingConstants.CENTER);
+            lbl.setVerticalAlignment(SwingConstants.CENTER);
+            frame.setLayout(new BorderLayout());
+            frame.add(lbl, BorderLayout.CENTER);
+
+            frame.setSize(icon.getIconWidth(), icon.getIconHeight());
+            frame.setLocationRelativeTo(null);
+
+            frame.setVisible(true);
+        } catch (IOException e) {
+            System.out.println("Ошибка вывода изображения на экран: " + e.getMessage());
+        }
+    }
+
+    public void blurringOnTheImage(String pathToImage){
+
+    }
+
 }
