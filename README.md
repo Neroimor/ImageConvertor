@@ -1,7 +1,6 @@
-![art](https://github.com/user-attachments/assets/5fd1eac5-891a-4e99-a291-7cf001c944b5)# Преобразование изображений
+# Преобразование изображений
 
 ## Метод преобразования изображения в различные форматы
-
 ### Формат gif
 ![art](https://github.com/user-attachments/assets/d69942f2-4a3a-4827-b290-aafcf0993bf5)
 ### Формат jpeg
